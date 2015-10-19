@@ -2,15 +2,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/colorWhite"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- 底部四个导航按钮 -->
+    <LinearLayout
+        android:id="@+id/ll_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_hight"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/tab_home_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tab_home_img"
+                android:layout_width="@dimen/tab_img_wh"
+                android:layout_height="@dimen/tab_img_wh"
+                android:src="@drawable/tab_home_down" />
+
+            <TextView
+                android:id="@+id/tab_home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:textColor="@color/colorGray1"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_add_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/tab_img_add_wh"
+                android:layout_height="@dimen/tab_img_add_wh"
+                android:src="@drawable/tab_add_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_my_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/tab_my_img"
+                android:layout_width="@dimen/tab_img_wh"
+                android:layout_height="@dimen/tab_img_wh"
+                android:src="@drawable/tab_my_up" />
+
+            <TextView
+                android:id="@+id/tab_my_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我de"
+                android:textColor="@color/colorGray1"
+                android:textSize="@dimen/tab_text_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/space_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/ll_tabs"
+        android:background="@color/colorGray4" />
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true">
+
+        <include
+            android:id="@+id/home_title_layout"
+            layout="@layout/layout_pub_title" />
+
+    </LinearLayout>
+
+    <!-- ViewPager 主要是加载内容的 -->
+    <eshow.customviews.viewpage.NoSlideViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/space_line"
+        android:layout_below="@+id/title_layout"
+        android:layout_marginBottom="2dp" />
 
 </RelativeLayout>

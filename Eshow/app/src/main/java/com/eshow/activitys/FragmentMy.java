@@ -12,8 +12,9 @@ import com.eshow.R;
 
 /**
  * Created by wuyajun on 15/10/19.
+ * Detail:我de 界面
  */
-public class TestFragment extends Fragment {
+public class FragmentMy extends Fragment {
 
     private final String TAG = "MyFragment";
 
@@ -35,7 +36,7 @@ public class TestFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.i(TAG, "--MyFragment->>onCreateView");
-        View view = inflater.inflate(R.layout.fragment_tab_test, null);
+        View view = inflater.inflate(R.layout.fragment_my, null);
         return view;
 
     }

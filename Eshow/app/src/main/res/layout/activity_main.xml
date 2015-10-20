@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/tab_home_layout"
+            android:id="@+id/tab_find_layout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -22,16 +22,16 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/tab_home_img"
+                android:id="@+id/tab_find_img"
                 android:layout_width="@dimen/tab_img_wh"
                 android:layout_height="@dimen/tab_img_wh"
-                android:src="@drawable/tab_home_down" />
+                android:src="@drawable/tab_find_down" />
 
             <TextView
-                android:id="@+id/tab_home_text"
+                android:id="@+id/tab_find_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="首页"
+                android:text="@string/tab_find"
                 android:textColor="@color/colorGray1"
                 android:textSize="@dimen/tab_text_size" />
         </LinearLayout>
@@ -69,7 +69,7 @@
                 android:id="@+id/tab_my_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我de"
+                android:text="@string/tab_my"
                 android:textColor="@color/colorGray1"
                 android:textSize="@dimen/tab_text_size" />
         </LinearLayout>
@@ -90,7 +90,7 @@
         android:layout_alignParentTop="true">
 
         <include
-            android:id="@+id/home_title_layout"
+            android:id="@+id/find_title_layout"
             layout="@layout/layout_pub_title" />
 
     </LinearLayout>
